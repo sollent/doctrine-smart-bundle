@@ -1,8 +1,8 @@
 {
-    "type": "project",
+    "type": "symfony-bundle",
+    "name": "sollent/doctrine-smart-bundle",
+    "version": "1.0.0",
     "license": "proprietary",
-    "minimum-stability": "stable",
-    "prefer-stable": true,
     "require": {
         "php": ">=7.2.5",
         "nette/php-generator": "^3.6",
@@ -13,7 +13,6 @@
         "symfony/form": "5.3.*",
         "symfony/twig-bundle": "5.3.*",
         "twig/twig": "^2.12|^3.0"
-
     },
     "require-dev": {
         "ext-ctype": "*",
@@ -28,13 +27,6 @@
         "symfony/yaml": "5.3.*",
         "twig/extra-bundle": "^2.12|^3.0"
     },
-    "config": {
-        "optimize-autoloader": true,
-        "preferred-install": {
-            "*": "dist"
-        },
-        "sort-packages": true
-    },
     "autoload": {
         "psr-4": {
             "App\\": "src/"
@@ -44,23 +36,6 @@
         "psr-4": {
             "App\\Tests\\": "tests/"
         }
-    },
-    "replace": {
-        "symfony/polyfill-ctype": "*",
-        "symfony/polyfill-iconv": "*",
-        "symfony/polyfill-php72": "*"
-    },
-    "scripts": {
-        "auto-scripts": {
-            "cache:clear": "symfony-cmd",
-            "assets:install %PUBLIC_DIR%": "symfony-cmd"
-        },
-        "post-install-cmd": [
-            "@auto-scripts"
-        ],
-        "post-update-cmd": [
-            "@auto-scripts"
-        ]
     },
     "conflict": {
         "symfony/symfony": "*"
