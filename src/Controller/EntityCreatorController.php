@@ -40,7 +40,7 @@ class EntityCreatorController extends AbstractController
      */
     public function listAction(): Response
     {
-        return $this->render('list.html.twig', [
+        return $this->render('@DoctrineSmartBundle/list.html.twig', [
             'entities' => $this->entityClassRepository->findAll()
         ]);
     }
@@ -67,7 +67,7 @@ class EntityCreatorController extends AbstractController
             $this->entityCreator->createBasedOn($entity);
         }
 
-        return $this->render('create.html.twig', [
+        return $this->render('@DoctrineSmartBundle/create.html.twig', [
             'form' => $form->createView()
         ]);
     }
