@@ -2,7 +2,9 @@
 
 namespace sollent\DoctrineSmartBundle;
 
-class DoctrineSmartBundle
+use Symfony\Component\HttpKernel\Bundle\Bundle;
+
+class DoctrineSmartBundle extends Bundle
 {
 
 }
