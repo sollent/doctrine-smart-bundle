@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Controller;
+namespace sollent\DoctrineSmartBundle\Controller;
 
-use App\DTO\Entity\EntityDTO;
-use App\EntityCreator\EntityCreatorInterface;
-use App\Form\EntityForm;
-use App\Repository\EntityClassRepositoryInterface;
+use sollent\DoctrineSmartBundle\DTO\Entity\EntityDTO;
+use sollent\DoctrineSmartBundle\EntityCreator\EntityCreatorInterface;
+use sollent\DoctrineSmartBundle\Form\EntityForm;
+use sollent\DoctrineSmartBundle\Repository\EntityClassRepositoryInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;

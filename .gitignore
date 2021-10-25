@@ -12,4 +12,6 @@
 /public/bundles/
 /var/
 /vendor/
+.env
+composer.json.dist
 ###< symfony/framework-bundle ###

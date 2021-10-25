@@ -1,6 +1,6 @@
 <?php
 
-namespace App\EntityCreator;
+namespace sollent\DoctrineSmartBundle\EntityCreator;
 
 interface EntityCreatorInterface
 {

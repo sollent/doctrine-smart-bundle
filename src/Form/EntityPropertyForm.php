@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Form;
+namespace sollent\DoctrineSmartBundle\Form;
 
-use App\DTO\Entity\EntityPropertyDTO;
+use sollent\DoctrineSmartBundle\DTO\Entity\EntityPropertyDTO;
 use Doctrine\DBAL\Types\Types;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\ChoiceList\Loader\CallbackChoiceLoader;

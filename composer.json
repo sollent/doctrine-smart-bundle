@@ -29,12 +29,12 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "sollent\\DoctrineSmartBundle\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "App\\Tests\\": "tests/"
+            "sollent\\Tests\\DoctrineSmartBundle": "tests"
         }
     },
     "conflict": {

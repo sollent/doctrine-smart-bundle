@@ -1,6 +1,6 @@
 <?php
 
-namespace App\DTO\Entity;
+namespace sollent\DoctrineSmartBundle\DTO\Entity;
 
 class EntityDTO
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\EntityCreator;
+namespace sollent\DoctrineSmartBundle\EntityCreator;
 
-use App\DTO\Entity\EntityDTO;
+use sollent\DoctrineSmartBundle\DTO\Entity\EntityDTO;
 use Nette\PhpGenerator\ClassType;
 use Nette\PhpGenerator\Parameter;
 use Nette\PhpGenerator\PhpFile;

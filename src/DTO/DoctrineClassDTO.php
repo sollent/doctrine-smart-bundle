@@ -1,6 +1,6 @@
 <?php
 
-namespace App\DTO;
+namespace sollent\DoctrineSmartBundle\DTO;
 
 use Doctrine\ORM\Mapping\ClassMetadata;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Repository;
+namespace sollent\DoctrineSmartBundle\Repository;
 
-use App\DTO\EntityClassInterface;
+use sollent\DoctrineSmartBundle\DTO\EntityClassInterface;
 
 interface EntityClassRepositoryInterface
 {

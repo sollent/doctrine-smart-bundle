@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Form;
+namespace sollent\DoctrineSmartBundle\Form;
 
-use App\DTO\Entity\EntityDTO;
+use sollent\DoctrineSmartBundle\DTO\Entity\EntityDTO;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;

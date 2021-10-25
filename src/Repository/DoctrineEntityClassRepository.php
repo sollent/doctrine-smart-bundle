@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Repository;
+namespace sollent\DoctrineSmartBundle\Repository;
 
-use App\DTO\DoctrineClassDTO;
+use sollent\DoctrineSmartBundle\DTO\DoctrineClassDTO;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Mapping\ClassMetadata;
 
