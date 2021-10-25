@@ -7,10 +7,8 @@ services:
     class: sollent\DoctrineSmartBundle\Repository\DoctrineEntityClassRepository
     autoconfigure: true
     autowire: true
-    arguments: [ '@doctrine.orm.entity_manager' ]
+    arguments: ['@doctrine.orm.entity_manager']
   sollent\DoctrineSmartBundle\Controller\EntityCreatorController:
     autoconfigure: true
     autowire: true
-    arguments:
-      - '@sollent.doctrine_smart_bundle.doctrine_entity_class_repository'
-      - '@sollent.doctrine_smart_bundle.doctrine_entity_creator'
+    arguments: ['@sollent.doctrine_smart_bundle.doctrine_entity_class_repository', '@sollent.doctrine_smart_bundle.doctrine_entity_creator']
