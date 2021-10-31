@@ -16,10 +16,10 @@ class DoctrineEntityCreator implements EntityCreatorInterface
      *
      * @throws \Exception
      */
-    public function createBasedOn($basedOnObject): void
+    public function createBasedOn($basedOnObject, string $namespace = null, string $externalSavePath = null): void
     {
         if ($basedOnObject instanceof EntityDTO) {
-            $this->createWithEntityDTO($basedOnObject);
+            $this->createWithEntityDTO($basedOnObject, $namespace, $externalSavePath);
 
             return;
         }
@@ -34,10 +34,12 @@ class DoctrineEntityCreator implements EntityCreatorInterface
 
     /**
      * @param EntityDTO $entityDTO
+     * @param string|null $namespace
+     * @param string|null $externalSavePath
      */
-    private function createWithEntityDTO(EntityDTO $entityDTO): void
+    private function createWithEntityDTO(EntityDTO $entityDTO, string $namespace = null, string $externalSavePath = null): void
     {
-        $rootNamespace = new PhpNamespace('App\\Entity');
+        $rootNamespace = new PhpNamespace($namespace ?? 'App\\Entity');
         $rootNamespace
             ->addUse('Doctrine\ORM\Mapping', 'ORM');
 
@@ -87,7 +89,7 @@ class DoctrineEntityCreator implements EntityCreatorInterface
             ->setStrictTypes()
             ->addNamespace($rootNamespace);
 
-        $filesystem->dumpFile(\sprintf($pathArr . '/src/Entity/%s.php', $entityClass->getName()), (string) $phpFile);
+        $filesystem->dumpFile(\sprintf($pathArr . '%s%s.php', $externalSavePath ?? '/src/Entity/', $entityClass->getName()), (string) $phpFile);
     }
 
     /**
