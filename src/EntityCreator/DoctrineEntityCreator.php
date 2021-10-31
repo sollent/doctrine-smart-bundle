@@ -89,7 +89,11 @@ class DoctrineEntityCreator implements EntityCreatorInterface
             ->setStrictTypes()
             ->addNamespace($rootNamespace);
 
-        $filesystem->dumpFile(\sprintf($pathArr . '%s%s.php', $externalSavePath ?? '/src/Entity/', $entityClass->getName()), (string) $phpFile);
+        if ($externalSavePath) {
+            $filesystem->dumpFile(\sprintf('%s%s.php', $externalSavePath, $entityClass->getName()), (string) $phpFile);
+        } else {
+            $filesystem->dumpFile(\sprintf($pathArr . '%s%s.php', '/src/Entity/', $entityClass->getName()), (string) $phpFile);
+        }
     }
 
     /**
